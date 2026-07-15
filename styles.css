@@ -503,21 +503,27 @@ img {
   width: 72px;
   height: 72px;
   border-radius: 16px;
-  padding: 2px;
-  background: #fff;
-  /* box-shadow: 0 0 0 2px #dfe5ef; */
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--ring, #dfe5ef);
+  outline: 2px solid transparent;
+  outline-offset: 0;
   display: grid;
   place-items: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.14);
+  transition:
+    transform 0.2s ease,
+    outline-color 0.2s ease,
+    outline-offset 0.2s ease;
 }
 
 .service:hover .service__icon {
-  box-shadow: 0 0 0 2px var(--ring, #000000);
+  outline-color: #000;
+  outline-offset: 0px;
 }
 
 .service.is-active .service__icon {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 2px var(--ring, #000000);
 }
 
 .service__icon img {
@@ -529,11 +535,11 @@ img {
 
 .service__icon--more {
   background: #f5f7fa;
-  box-shadow: 0 0 0 2px #dfe5ef;
 }
 
 .service.service--more:hover .service__icon--more {
-  box-shadow: 0 0 0 2px #000000;
+  outline-color: #000;
+  outline-offset: 2px;
 }
 
 .service__more-glyph {
