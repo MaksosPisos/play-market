@@ -773,65 +773,9 @@ img {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 0.9fr)) repeat(3, minmax(0, 1.55fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   align-items: start;
-}
-
-.card-poster {
-  display: grid;
-  gap: 10px;
-  min-width: 0;
-}
-
-.card-poster__img {
-  aspect-ratio: 134 / 290;
-  border-radius: 17px;
-  overflow: hidden;
-  background: #111;
-}
-
-.card-poster__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.card-poster:hover .card-poster__img img {
-  transform: scale(1.04);
-}
-
-.card-poster__title {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: #1f2937;
-  line-height: 1.25;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.card-poster__price {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: #1f2937;
-}
-
-.sale {
-  display: inline-flex;
-  align-items: center;
-  height: 22px;
-  padding: 0 6px;
-  border-radius: 6px;
-  background: #22a045;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
 }
 
 .card-offer {

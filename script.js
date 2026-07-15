@@ -1,23 +1,3 @@
-const posterGames = [
-  {
-    title: "Wildcat Gun Machine",
-    price: "5.99",
-    sale: "-50%",
-    img: "assets/wildcat.png",
-  },
-  {
-    title: "Rogue Company",
-    price: "Free",
-    img: "assets/rogue.png",
-  },
-  {
-    title: "Zombie Army 4: Dead War",
-    price: "24",
-    sale: "-40%",
-    img: "assets/zombie.png",
-  },
-];
-
 const offers = [
   {
     title: "💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ",
@@ -51,19 +31,6 @@ const offers = [
   },
 ];
 
-function posterCard(game) {
-  return `
-    <article class="card-poster">
-      <div class="card-poster__img"><img src="${game.img}" alt="${game.title}" /></div>
-      <h3 class="card-poster__title">${game.title}</h3>
-      <div class="card-poster__price">
-        ${game.sale ? `<span class="sale">${game.sale}</span>` : ""}
-        <span>${game.price}</span>
-      </div>
-    </article>
-  `;
-}
-
 function offerCard(offer) {
   return `
     <article class="card-offer">
@@ -81,9 +48,7 @@ function offerCard(offer) {
 }
 
 function renderProducts(root) {
-  const posters = posterGames.map(posterCard).join("");
-  const cards = offers.slice(0, 3).map(offerCard).join("");
-  root.innerHTML = posters + cards;
+  root.innerHTML = offers.map(offerCard).join("");
 }
 
 document.querySelectorAll("[data-products]").forEach(renderProducts);
