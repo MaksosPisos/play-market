@@ -571,6 +571,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .topup__thumb {
@@ -579,16 +580,25 @@ img {
   flex-shrink: 0;
 }
 
+.topup__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
 .topup__title-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 2px;
 }
 
 .topup__title-row strong {
   font-size: 16px;
+  font-weight: 700;
   color: #363636;
+  line-height: 1.2;
 }
 
 .badge-green {
@@ -598,20 +608,26 @@ img {
   font-weight: 700;
   border-radius: 999px;
   padding: 3px 8px;
+  line-height: 1.2;
 }
 
 .promo-link {
   border: 0;
-  background: #f3f5f8;
-  border-radius: 8px;
+  background: rgba(38, 139, 243, 0.1);
+  border-radius: 999px;
   height: 26px;
-  padding: 0 8px;
+  padding: 0 10px 0 12px;
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   font-size: 12px;
   font-weight: 700;
+  color: #000;
   cursor: pointer;
+}
+
+.promo-link svg {
+  flex-shrink: 0;
 }
 
 .field {
@@ -648,13 +664,14 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 6px;
-  background: #111827;
+  background: #A0A8B5;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
   font-style: italic;
   display: grid;
   place-items: center;
+  
 }
 
 .field--amount {
