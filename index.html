@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Market — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__inner">
+          <a class="logo" href="#" aria-label="На главную">
+            <span class="logo__mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M6.5 4.2v13.6L18.2 11 6.5 4.2Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </a>
+          <button class="btn btn--catalog" type="button" id="catalogBtn" aria-expanded="false">
+            <span class="catalog-icon" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            Каталог
+          </button>
+          <label class="search">
+            <span class="search__field">
+              <input
+                type="search"
+                placeholder="Игра, приложение или услуга..."
+              />
+              <button class="search__fav" type="button" aria-label="Избранное">
+                <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                  <path
+                    d="M7 12.1l-1.01-.9C2.4 8.1 0 6 0 3.45A3.4 3.4 0 0 1 3.45.1c1.08 0 2.12.5 2.8 1.3A3.55 3.55 0 0 1 10.55.1 3.4 3.4 0 0 1 14 3.45c0 2.55-2.4 4.65-5.99 7.76L7 12.1Z"
+                    fill="#9AA3B5"
+                  />
+                </svg>
+              </button>
+            </span>
+            <button class="search__submit" type="button" aria-label="Найти">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <circle cx="8" cy="8" r="5.5" stroke="#fff" stroke-width="2" />
+                <path d="M12.2 12.2 16 16" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </label>
+
+          <button class="profile" type="button" aria-label="Профиль">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="7" r="3.2" stroke="#1F2937" stroke-width="1.6" />
+              <path
+                d="M3.5 17c1.2-3 3.4-4.5 6.5-4.5S15.3 14 16.5 17"
+                stroke="#1F2937"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="mega" id="catalogMega" hidden>
+          <div class="mega__inner">
+            <aside class="mega__side">
+              <button class="mega__cat is-active" type="button">
+                <span>Игры и игровые сервисы</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5 11.5 9 7 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="mega__cat" type="button">
+                <span>Игровые ценности</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5 11.5 9 7 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="mega__cat" type="button">
+                <span>Мобильные игры</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5 11.5 9 7 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="mega__cat" type="button">
+                <span>Сервисы и соцсети</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5 11.5 9 7 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="mega__cat" type="button">
+                <span>Программы</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5 11.5 9 7 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </aside>
+            <div class="mega__grid">
+              <div class="mega__col">
+                <h3><img src="assets/steam.png" alt="" /> Steam</h3>
+                <ul>
+                  <li><a href="#">Игры и DLC</a></li>
+                  <li><a href="#">Пополнение баланса</a></li>
+                  <li><a href="#">Подарочные карты</a></li>
+                  <li><a href="#">Коллекционные карточки</a></li>
+                  <li><a href="#">Смена региона</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <h3><img src="assets/ps.png" alt="" /> PlayStation</h3>
+                <ul>
+                  <li><a href="#">Игры и DLC</a></li>
+                  <li><a href="#">Пополнение баланса</a></li>
+                  <li><a href="#">Новые аккаунты</a></li>
+                  <li><a href="#">PS Plus</a></li>
+                  <li><a href="#">EA Play</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <h3>Xbox</h3>
+                <ul>
+                  <li><a href="#">Игры и DLC</a></li>
+                  <li><a href="#">Пополнение баланса</a></li>
+                  <li><a href="#">Новые аккаунты</a></li>
+                  <li><a href="#">Xbox Game Pass</a></li>
+                  <li><a href="#">Услуги</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <h3>Nintendo</h3>
+                <ul>
+                  <li><a href="#">Игры и DLC</a></li>
+                  <li><a href="#">Пополнение баланса</a></li>
+                  <li><a href="#">Новые аккаунты</a></li>
+                  <li><a href="#">NS Online</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <h3>Battle.net</h3>
+                <ul>
+                  <li><a href="#">World of Warcraft</a></li>
+                  <li><a href="#">Игры и DLC</a></li>
+                  <li><a href="#">Прямое пополнение</a></li>
+                  <li><a href="#">Подарочные карты</a></li>
+                  <li><a href="#">Новые аккаунты</a></li>
+                </ul>
+              </div>
+              <div class="mega__col">
+                <h3>Подборки</h3>
+                <ul>
+                  <li><a href="#">Скидки 90%</a></li>
+                  <li><a href="#">Популярные издатели</a></li>
+                  <li><a href="#">Лучшие серии игр</a></li>
+                  <li><a href="#">Steam Deck</a></li>
+                  <li><a href="#">Bundle-наборы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <div class="hero__slide">
+            <div class="hero__visual"></div>
+            <div class="hero__nav">
+              <button type="button" aria-label="Предыдущий слайд">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M13.5 5.5 8 11l5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" aria-label="Следующий слайд">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8.5 5.5 14 11l-5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="hero__dots" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="topup-card">
+          <div class="services">
+            <button class="service is-active" type="button">
+              <span class="service__icon" style="--ring:#1482b3"><img src="assets/steam.png" alt="" /></span>
+              <span>Steam</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#45baee"><img src="assets/telegram.png" alt="" /></span>
+              <span>Telegram</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#b8c5ff"><img src="assets/roblox.png" alt="" /></span>
+              <span>Roblox</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#e86eff"><img src="assets/brawl.png" alt="" /></span>
+              <span>Brawl Stars</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#fff"><img src="assets/pubg.png" alt="" /></span>
+              <span>PUBG Mob...</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#4acdff"><img src="assets/appstore.png" alt="" /></span>
+              <span>App Store</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#38d4ad"><img src="assets/chatgpt.png" alt="" /></span>
+              <span>ChatGPT</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#117fda"><img src="assets/ps.png" alt="" /></span>
+              <span>PlayStation</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#454545"><img src="assets/tiktok.png" alt="" /></span>
+              <span>TikTok</span>
+            </button>
+            <button class="service" type="button">
+              <span class="service__icon" style="--ring:#fff"><img src="assets/mlbb.png" alt="" /></span>
+              <span>Mobile Leg..</span>
+            </button>
+            <button class="service service--more" type="button">
+              <span class="service__icon service__icon--more" style="--ring:#dfe5ef">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="7" cy="14" r="2.2" fill="#8A94A6"/>
+                  <circle cx="14" cy="14" r="2.2" fill="#8A94A6"/>
+                  <circle cx="21" cy="14" r="2.2" fill="#8A94A6"/>
+                </svg>
+              </span>
+              <span>еще 841</span>
+            </button>
+          </div>
+
+          <div class="topup">
+            <div class="topup__app">
+              <div class="topup__meta">
+                <div class="topup__title-row">
+                  <strong>Пополнение Steam</strong>
+                  <span class="badge-green">5%</span>
+                </div>
+                <button class="promo-link" type="button">
+                  Ввести промокод
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5 8 6 4.5 9.5" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <span class="service__icon topup__thumb" style="--ring:#1482b3"><img src="assets/steam.png" alt="" /></span>
+            </div>
+
+            <label class="field">
+              <span class="field__icon">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="7" r="3" stroke="#8A94A6" stroke-width="1.5" />
+                  <path d="M4 16.5c1-2.6 2.9-3.9 6-3.9s5 1.3 6 3.9" stroke="#8A94A6" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input type="text" placeholder="Логин Steam" />
+              <span class="field__hint" title="Подсказка">i</span>
+            </label>
+
+            <div class="field field--amount">
+              <div class="field--amount__left">
+                <span class="field__icon">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="7.25" stroke="#8A94A6" stroke-width="1.5"/>
+                    <path d="M10 5.5v9M7.5 8.2c.6-.7 1.5-1 2.5-1 1.4 0 2.5.7 2.5 2s-1.1 2-2.5 2c-1.4 0-2.5.7-2.5 2 .1.9.9 1.5 2.2 1.6" stroke="#8A94A6" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="field__label">Сумма</span>
+                  <strong>500₽</strong>
+                </div>
+              </div>
+              <div class="currency">
+                <button class="is-active" type="button">$</button>
+                <button type="button">₸</button>
+                <button type="button">₽</button>
+              </div>
+            </div>
+
+            <button class="btn btn--pay" type="button">Оплатить 500$</button>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <h2>Популярные товары</h2>
+            <div class="chips">
+              <button class="chip is-active" type="button">Донат</button>
+              <button class="chip" type="button">Подписки</button>
+              <button class="chip" type="button">Предметы</button>
+              <button class="chip" type="button">Аккаунты</button>
+              <button class="chip" type="button">Ключи</button>
+              <button class="chip" type="button">Игровая валюта</button>
+              <button class="chip" type="button">Другое</button>
+            </div>
+          </div>
+          <div class="products" data-products></div>
+        </section>
+
+        <section class="section">
+          <div class="section__head section__head--between">
+            <h2>Рекомендованные товары</h2>
+            <button class="btn btn--ghost" type="button">Показать все</button>
+          </div>
+          <div class="products" data-products></div>
+        </section>
+
+        <section class="section">
+          <div class="section__head section__head--between">
+            <h2>Другие товары</h2>
+            <button class="btn btn--ghost" type="button">Показать все</button>
+          </div>
+          <div class="products" data-products></div>
+        </section>
+
+        <section class="section reviews-section">
+          <div class="section__head section__head--between">
+            <div>
+              <h2>Последние отзывы</h2>
+              <p class="section__note">Все отзывы взяты с независимой площадки</p>
+            </div>
+            <button class="btn btn--ghost" type="button">Показать все</button>
+          </div>
+          <div class="reviews">
+            <article class="review">
+              <header class="review__head">
+                <div class="review__user">
+                  <img src="assets/avatar.jpg" alt="" />
+                  <div>
+                    <strong>Bizidin</strong>
+                    <div class="stars" aria-label="5.0">
+                      <span>★★★★★</span> <b>5.0</b>
+                    </div>
+                  </div>
+                </div>
+                <time>Сегодня в 11:48</time>
+              </header>
+              <p class="review__text">
+                Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!
+              </p>
+              <a class="review__product" href="#">
+                <img src="assets/funtime.jpg" alt="" />
+                <span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span>
+                <span class="price-pill">139₽</span>
+              </a>
+            </article>
+            <article class="review">
+              <header class="review__head">
+                <div class="review__user">
+                  <img src="assets/avatar.jpg" alt="" />
+                  <div>
+                    <strong>Bizidin</strong>
+                    <div class="stars" aria-label="5.0">
+                      <span>★★★★★</span> <b>5.0</b>
+                    </div>
+                  </div>
+                </div>
+                <time>Сегодня в 11:48</time>
+              </header>
+              <p class="review__text">
+                Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!
+              </p>
+              <a class="review__product" href="#">
+                <img src="assets/funtime.jpg" alt="" />
+                <span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span>
+                <span class="price-pill">139₽</span>
+              </a>
+            </article>
+            <article class="review">
+              <header class="review__head">
+                <div class="review__user">
+                  <img src="assets/avatar.jpg" alt="" />
+                  <div>
+                    <strong>Bizidin</strong>
+                    <div class="stars" aria-label="5.0">
+                      <span>★★★★★</span> <b>5.0</b>
+                    </div>
+                  </div>
+                </div>
+                <time>Сегодня в 11:48</time>
+              </header>
+              <p class="review__text">
+                Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!
+              </p>
+              <a class="review__product" href="#">
+                <img src="assets/funtime.jpg" alt="" />
+                <span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span>
+                <span class="price-pill">139₽</span>
+              </a>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__top">
+          <nav class="footer__nav">
+            <a href="#">Стать продавцом</a>
+            <a href="#">Бонусы</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Гарантии</a>
+            <a href="#">Отзывы</a>
+          </nav>
+          <div class="footer__social">
+            <a href="#" aria-label="VK"><svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 1.5c.2 5.4 2.9 8.6 7.5 8.6h.4V7.3c2.1.2 3.6 1.8 4.3 3.7h2.5C14.7 8.4 13 6.6 12 5.7c1-.9 2.5-3.2 2.9-4.2h-2.3c-.5 1.5-1.8 3.5-3.2 3.7V1.5H7.8v6.5C6.4 7.8 4.5 5.6 4.2 1.5H1Z" fill="#1F2937"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg width="18" height="16" viewBox="0 0 18 16" fill="none"><path d="M1.1 7.2 15.4.6c.7-.3 1.3.2 1.1 1.1L14 14.2c-.2.8-.7 1-1.4.6l-3.9-3-1.9 1.8c-.2.2-.4.4-.8.4l.3-4.1 7.4-6.7c.3-.3 0-.4-.4-.2L4.7 9.4 1 8.2c-.8-.2-.8-.8.1-1Z" fill="#1F2937"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><rect x="0.5" y="0.5" width="17" height="13" rx="3" stroke="#1F2937"/><path d="M7.2 3.8v6.4L12.5 7 7.2 3.8Z" fill="#1F2937"/></svg></a>
+            <a href="#" aria-label="Discord"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M15.2 1.4A13.4 13.4 0 0 0 11.8.1l-.3.6a12 12 0 0 0-5 0L6.2.1A13.4 13.4 0 0 0 2.8 1.4C.8 4.4.3 7.3.5 10.2a13.6 13.6 0 0 0 4.1 2.1l.9-1.1a8.6 8.6 0 0 1-1.4-.7l.3-.3c2.7 1.2 5.6 1.2 8.2 0l.3.3c-.4.3-.9.5-1.4.7l.9 1.1a13.5 13.5 0 0 0 4.1-2.1c.3-3.4-.5-6.3-2.3-8.8ZM6.6 8.4c-.8 0-1.4-.7-1.4-1.6S5.8 5.3 6.6 5.3s1.5.7 1.4 1.5-.7 1.6-1.4 1.6Zm4.8 0c-.8 0-1.4-.7-1.4-1.6s.7-1.5 1.4-1.5 1.5.7 1.4 1.5-.6 1.6-1.4 1.6Z" fill="#1F2937"/></svg></a>
+          </div>
+          <div class="payments">
+            <span class="pay visa">VISA</span>
+            <span class="pay mc"></span>
+            <span class="pay mir">мир</span>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Соглашение</a>
+          <a href="#">Договор-оферта</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
