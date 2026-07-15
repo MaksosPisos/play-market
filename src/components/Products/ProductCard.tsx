@@ -1,5 +1,6 @@
 import type { Offer } from "../../types";
 import { cartStore } from "../../store/cart";
+import { notificationsStore } from "@/store/notifications";
 
 interface ProductCardProps {
   offer: Offer;
@@ -9,9 +10,16 @@ export function ProductCard({ offer }: ProductCardProps) {
   function changeCartState () {
     if (!cartStore.productInCart(offer.id)) {
       cartStore.addItem(offer)
-      
+      notificationsStore.addNotification({
+        title: 'Успешно добавлено',
+        type: 'success'
+      })
     } else {
       cartStore.deleteItem(offer.id)
+      notificationsStore.addNotification({
+        title: 'Успешно удалено',
+        type: 'danger'
+      })
     }
   }
   return (

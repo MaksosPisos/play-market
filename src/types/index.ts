@@ -38,3 +38,10 @@ export interface CatalogColumn {
   icon?: string;
   links: string[];
 }
+
+export interface Notification{
+  id: number,
+  title: string,
+  type: 'danger' | 'success' | 'warning',
+  delay?: number
+}

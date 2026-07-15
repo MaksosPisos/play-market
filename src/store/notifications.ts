@@ -1,22 +1,28 @@
 import { makeAutoObservable } from 'mobx'
-
-interface Notification{
-  title: string,
-  type: 'danger' | 'success' | 'warning',
-  delay?: number
-}
+import type { Notification } from '../types'
 
 class NotificationsStore {
   notifications: Notification[] = []
+  id = 1
   constructor () {
     makeAutoObservable(this)
   }
-  addNotification(notification: Notification) {
+  addNotification(notification: Omit<Notification, "id">) {
+    const delay = notification.delay ?? 5000
+    const id = this.id++
     this.notifications.push({
       ...notification,
-      delay: notification.delay ?? 5000
+      id,
+      delay
     })
+    setTimeout(() => {
+      this.deleteNotification(id)
+    }, delay)
+  }
+
+  deleteNotification(id: number) {
+    this.notifications = this.notifications.filter(item => item.id !== id)
   }
 }
 
-export const notifications = new NotificationsStore()
+export const notificationsStore = new NotificationsStore()
