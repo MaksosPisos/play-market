@@ -664,14 +664,17 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 6px;
-  background: #A0A8B5;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  font-style: italic;
   display: grid;
   place-items: center;
-  
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.field__hint img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  display: block;
 }
 
 .field--amount {
