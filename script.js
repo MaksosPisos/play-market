@@ -27,7 +27,7 @@ const offers = [
     title: "💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ",
     price: "990 ₽",
     old: "1 990 ₽",
-    img: "assets/wildcat.png",
+    img: "assets/fec7c0737fc84d914b4af27d256b9a251f294983.png",
   },
 ];
 
