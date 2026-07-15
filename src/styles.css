@@ -129,7 +129,7 @@ img {
   align-items: center;
   gap: 4px;
   padding: 2px;
-  margin-right: 80px;
+  margin-right: 48px;
   background: #000;
   border-radius: 10px;
 }
@@ -181,6 +181,31 @@ img {
   place-items: center;
   cursor: pointer;
   flex-shrink: 0;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cart-btn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #f3f5f8;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.cart-btn:hover {
+  background: #e8ecf2;
 }
 
 .profile {
@@ -547,11 +572,11 @@ img {
   width: 28px;
   height: 28px;
   background: #8a94a6;
-  -webkit-mask-image: url("assets/more.png");
+  -webkit-mask-image: url("/assets/more.png");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  mask-image: url("assets/more.png");
+  mask-image: url("/assets/more.png");
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;

@@ -1,0 +1,34 @@
+import type { Offer } from "../../types";
+import { cartStore } from "../../store/cart";
+
+interface ProductCardProps {
+  offer: Offer;
+}
+
+export function ProductCard({ offer }: ProductCardProps) {
+  function changeCartState () {
+    if (!cartStore.productInCart(offer.id)) {
+      cartStore.addItem(offer)
+      
+    } else {
+      cartStore.deleteItem(offer.id)
+    }
+  }
+  return (
+    <article className="card-offer">
+      <div className="card-offer__img">
+        <img src={offer.img} alt="" />
+      </div>
+      <div className="card-offer__body">
+        <h3 className="card-offer__title">{offer.title}</h3>
+        <div className="card-offer__price">
+          <strong>{offer.price}</strong>
+          <s>{offer.old}</s>
+        </div>
+        <button className="card-offer__buy" type="button" onClick={changeCartState}>
+          Купить
+        </button>
+      </div>
+    </article>
+  );
+}
