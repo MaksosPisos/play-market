@@ -473,8 +473,8 @@ img {
 
 .services {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
+  gap: 32px;
+  /* overflow-x: auto; */
   padding-bottom: 4px;
   scrollbar-width: thin;
 }
@@ -505,15 +505,19 @@ img {
   border-radius: 16px;
   padding: 2px;
   background: #fff;
-  box-shadow: 0 0 0 2px var(--ring, #dfe5ef);
+  /* box-shadow: 0 0 0 2px #dfe5ef; */
   display: grid;
   place-items: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.service:hover .service__icon,
+.service:hover .service__icon {
+  box-shadow: 0 0 0 2px var(--ring, #000000);
+}
+
 .service.is-active .service__icon {
   transform: translateY(-2px);
+  box-shadow: 0 0 0 2px var(--ring, #000000);
 }
 
 .service__icon img {
@@ -525,6 +529,27 @@ img {
 
 .service__icon--more {
   background: #f5f7fa;
+  box-shadow: 0 0 0 2px #dfe5ef;
+}
+
+.service.service--more:hover .service__icon--more {
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.service__more-glyph {
+  width: 28px;
+  height: 28px;
+  background: #8a94a6;
+  -webkit-mask-image: url("assets/more.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url("assets/more.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-mode: luminance;
+  -webkit-mask-mode: luminance;
 }
 
 .topup {
