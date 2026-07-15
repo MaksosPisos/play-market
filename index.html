@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -147,19 +151,34 @@
 
       <main class="main">
         <section class="hero">
-          <div class="hero__slide">
-            <div class="hero__visual"></div>
+          <div class="hero__frame">
+            <div class="swiper hero-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide hero-slide--1"></div>
+                <div class="swiper-slide hero-slide hero-slide--2"></div>
+                <div class="swiper-slide hero-slide hero-slide--3"></div>
+                <div class="swiper-slide hero-slide hero-slide--4"></div>
+                <div class="swiper-slide hero-slide hero-slide--5"></div>
+                <div class="swiper-slide hero-slide hero-slide--6"></div>
+              </div>
+            </div>
+
+            <div class="hero__notch" aria-hidden="true"></div>
+
             <div class="hero__nav">
-              <button type="button" aria-label="Предыдущий слайд">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M13.5 5.5 8 11l5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <button type="button" class="hero-prev" aria-label="Предыдущий слайд">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M13.5 5.5 8 11l5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </button>
-              <button type="button" aria-label="Следующий слайд">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8.5 5.5 14 11l-5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <button type="button" class="hero-next" aria-label="Следующий слайд">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M8.5 5.5 14 11l-5.5 5.5" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </button>
             </div>
-            <div class="hero__dots" aria-hidden="true">
-              <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
+
+            <div class="swiper-pagination hero-pagination"></div>
           </div>
         </section>
 
@@ -407,6 +426,7 @@
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

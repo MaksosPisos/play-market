@@ -88,6 +88,24 @@ function renderProducts(root) {
 
 document.querySelectorAll("[data-products]").forEach(renderProducts);
 
+new Swiper(".hero-swiper", {
+  loop: true,
+  speed: 600,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: ".hero-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".hero-next",
+    prevEl: ".hero-prev",
+  },
+});
+
 const catalogBtn = document.getElementById("catalogBtn");
 const catalogMega = document.getElementById("catalogMega");
 

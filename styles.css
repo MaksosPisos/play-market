@@ -329,48 +329,94 @@ img {
   gap: 32px;
 }
 
-.hero__slide {
+.hero {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero__frame {
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hero-swiper {
+  width: 100%;
+  max-width: 1200px;
   height: 263px;
   border-radius: 12px;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, #1a1f2c 0%, #2b3344 45%, #12151c 100%);
+  background: #0a0a0a;
 }
 
-.hero__visual {
+.hero-slide {
+  width: 100%;
+  height: 263px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide--1 {
+  background:
+    radial-gradient(circle at 18% 40%, rgba(70, 130, 255, 0.45), transparent 42%),
+    radial-gradient(circle at 78% 28%, rgba(255, 80, 150, 0.28), transparent 36%),
+    linear-gradient(135deg, #10141d 0%, #1c2433 50%, #0b0d12 100%);
+}
+
+.hero-slide--2 {
+  background:
+    radial-gradient(circle at 70% 50%, rgba(34, 197, 94, 0.28), transparent 40%),
+    linear-gradient(135deg, #0f172a 0%, #14532d 55%, #052e16 100%);
+}
+
+.hero-slide--3 {
+  background:
+    radial-gradient(circle at 30% 60%, rgba(249, 115, 22, 0.35), transparent 45%),
+    linear-gradient(135deg, #1c1010 0%, #7c2d12 50%, #0c0a09 100%);
+}
+
+.hero-slide--4 {
+  background:
+    radial-gradient(circle at 60% 30%, rgba(168, 85, 247, 0.4), transparent 40%),
+    linear-gradient(135deg, #140b1f 0%, #4c1d95 50%, #0b0612 100%);
+}
+
+.hero-slide--5 {
+  background:
+    radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.35), transparent 42%),
+    linear-gradient(135deg, #082f49 0%, #0c4a6e 45%, #020617 100%);
+}
+
+.hero-slide--6 {
+  background:
+    radial-gradient(circle at 55% 45%, rgba(244, 63, 94, 0.32), transparent 40%),
+    linear-gradient(135deg, #1a0a10 0%, #881337 50%, #0a0508 100%);
+}
+
+.hero__notch {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 40%, rgba(80, 140, 255, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(255, 90, 160, 0.25), transparent 35%),
-    linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
-  animation: heroShine 8s ease-in-out infinite;
-}
-
-@keyframes heroShine {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.04);
-    opacity: 1;
-  }
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 98px;
+  height: 48px;
+  background: var(--surface);
+  border-bottom-left-radius: 18px;
+  pointer-events: none;
 }
 
 .hero__nav {
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  right: 0;
+  z-index: 3;
   display: flex;
-  gap: 2px;
-  background: rgba(255, 255, 255, 0.92);
+  align-items: center;
+  background: #fff;
   border: 1px solid #e5e9f1;
   border-radius: 48px;
-  padding: 0;
   overflow: hidden;
 }
 
@@ -382,29 +428,38 @@ img {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.hero__dots {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+.hero__nav button:hover {
+  background: #f5f7fa;
+}
+
+.hero-pagination {
+  position: absolute !important;
+  right: 24px !important;
+  bottom: 18px !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  z-index: 3;
   display: flex;
-  gap: 4px;
-  padding: 10px 12px;
-  background: #fff;
-  border-radius: 12px 12px 0 0;
+  gap: 6px;
 }
 
-.hero__dots span {
+.hero-pagination .swiper-pagination-bullet {
   width: 20px;
-  height: 4px;
+  height: 3px;
+  margin: 0 !important;
   border-radius: 12px;
-  background: #d5dae3;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.hero__dots span.is-active {
-  background: #1f2937;
+.hero-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+  transform: scaleX(1.05);
 }
 
 .topup-card {
@@ -1131,7 +1186,8 @@ img {
     margin-left: 0;
   }
 
-  .hero__slide {
+  .hero-swiper,
+  .hero-slide {
     height: 180px;
   }
 
