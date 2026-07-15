@@ -16,17 +16,13 @@
     <div class="page">
       <header class="header">
         <div class="header__inner">
-          <a class="logo" href="#" aria-label="На главную">
-            <span class="logo__mark" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path
-                  d="M6.5 4.2v13.6L18.2 11 6.5 4.2Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </a>
-          <button class="btn btn--catalog" type="button" id="catalogBtn" aria-expanded="false">
+          <button
+            class="btn btn--catalog"
+            type="button"
+            id="catalogBtn"
+            aria-expanded="false"
+            aria-controls="catalogMega"
+          >
             <span class="catalog-icon" aria-hidden="true">
               <i></i><i></i><i></i><i></i>
             </span>
@@ -56,19 +52,11 @@
           </label>
 
           <button class="profile" type="button" aria-label="Профиль">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="7" r="3.2" stroke="#1F2937" stroke-width="1.6" />
-              <path
-                d="M3.5 17c1.2-3 3.4-4.5 6.5-4.5S15.3 14 16.5 17"
-                stroke="#1F2937"
-                stroke-width="1.6"
-                stroke-linecap="round"
-              />
-            </svg>
+            <img src="assets/profile.png" alt="" width="44" height="44" />
           </button>
         </div>
 
-        <div class="mega" id="catalogMega" hidden>
+        <div class="mega" id="catalogMega" aria-hidden="true">
           <div class="mega__inner">
             <aside class="mega__side">
               <button class="mega__cat is-active" type="button">

@@ -91,11 +91,34 @@ document.querySelectorAll("[data-products]").forEach(renderProducts);
 const catalogBtn = document.getElementById("catalogBtn");
 const catalogMega = document.getElementById("catalogMega");
 
-catalogBtn?.addEventListener("click", () => {
-  const open = catalogMega.hasAttribute("hidden");
-  if (open) catalogMega.removeAttribute("hidden");
-  else catalogMega.setAttribute("hidden", "");
+function setCatalogOpen(open) {
+  catalogMega.classList.toggle("is-open", open);
+  catalogMega.setAttribute("aria-hidden", String(!open));
   catalogBtn.setAttribute("aria-expanded", String(open));
+}
+
+function toggleCatalog() {
+  setCatalogOpen(!catalogMega.classList.contains("is-open"));
+}
+
+catalogBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleCatalog();
+});
+
+catalogMega?.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  if (catalogMega?.classList.contains("is-open")) setCatalogOpen(false);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && catalogMega?.classList.contains("is-open")) {
+    setCatalogOpen(false);
+    catalogBtn?.focus();
+  }
 });
 
 document.querySelectorAll(".mega__cat").forEach((btn) => {
