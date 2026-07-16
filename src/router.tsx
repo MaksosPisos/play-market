@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./layouts/Layout";
 import { HomePage } from "./pages/HomePage";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
+import { Search } from "./pages/Search";
 
 export const router = createBrowserRouter([
   {
@@ -9,6 +10,7 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: 'search', element: <Search />},
       {
         path: "seller",
         element: <PlaceholderPage title="Стать продавцом" />,
